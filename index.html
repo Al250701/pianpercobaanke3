@@ -6,7 +6,7 @@
                 <table width="100%" height ="40px" style="background-color:#015A7C; color: white">
                     <tr >
                         <td>
-                            <center><h1 style="font-size:30px;">Peta Persebaran Tempat Peribadatan di Kecamatan Sukun, Malang</h1>
+                            <center><h1 style="font-size:20px;">Peta Persebaran Tempat Peribadatan di Kecamatan Sukun, Malang</h1>
                         </td>
                     </tr>
                 </table>
@@ -138,7 +138,7 @@
                         <td colspan="2">' + (feature.properties['PROVINSI'] !== null ? autolinker.link(feature.properties['PROVINSI'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: auto});
         }
 
         function style_02_BATAS_ADMINISTRASI_SUKUN_AR_1_0(feature) {
@@ -153,7 +153,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(103,109,206,1.0)',
                 interactive: true,
             }
@@ -168,7 +168,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(131,217,170,1.0)',
                 interactive: true,
             }
@@ -183,7 +183,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(204,131,72,1.0)',
                 interactive: true,
             }
@@ -198,7 +198,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(143,232,138,1.0)',
                 interactive: true,
             }
@@ -213,7 +213,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(141,65,233,1.0)',
                 interactive: true,
             }
@@ -228,7 +228,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(109,166,212,1.0)',
                 interactive: true,
             }
@@ -243,7 +243,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(227,88,95,1.0)',
                 interactive: true,
             }
@@ -258,7 +258,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(204,47,212,1.0)',
                 interactive: true,
             }
@@ -273,7 +273,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(92,214,208,1.0)',
                 interactive: true,
             }
@@ -288,7 +288,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(161,211,103,1.0)',
                 interactive: true,
             }
@@ -303,7 +303,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(208,86,153,1.0)',
                 interactive: true,
             }
@@ -318,7 +318,7 @@
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
-                fillOpacity: 1,
+                fillOpacity: 0.5,
                 fillColor: 'rgba(233,226,90,1.0)',
                 interactive: true,
             }
@@ -398,16 +398,12 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Id</th>\
-                        <td>' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Toponim</th>\
+                        <td>' + (feature.properties['Toponim'] !== null ? autolinker.link(feature.properties['Toponim'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kegiatan</th>\
                         <td>' + (feature.properties['Kegiatan'] !== null ? autolinker.link(feature.properties['Kegiatan'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Toponim</th>\
-                        <td>' + (feature.properties['Toponim'] !== null ? autolinker.link(feature.properties['Toponim'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Agama</th>\
@@ -435,7 +431,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Foto</th>\
-                        <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <td>' + (feature.properties['Foto'] !== null ? '<img style="height: 140px; weight: 140px;" src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Jalan</th>\
@@ -793,6 +789,9 @@
             <body>
                 <table width="100%" height ="55px" style="background-color:#015A7C;">
                     <tr >
+                      <td>
+                          <center><h1 style="font-size:5px;">Sekian Terima Duit</h1>
+                        </td>   
                     </tr>
                 </table>
             </body>    
